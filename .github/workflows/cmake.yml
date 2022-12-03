@@ -1,0 +1,28 @@
+name: Build Status
+
+on: 
+ push:
+ pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install
+      run: |
+       sudo apt-get install -y -qq lcov
+       sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+      
+
+    - name: Compile using Cmake
+      run: |
+        export CXX=g++-9
+        mkdir build
+        cd build
+        cmake -DCOVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ../
+        make
+        make code_coverage
+        test/code_test
