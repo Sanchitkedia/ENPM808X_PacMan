@@ -44,3 +44,9 @@ jobs:
         name: colcon-logs
         path: ros_ws/log
       if: always()
+
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@1.1.3
+      with:
+        path-to-lcov: ${{ github.workspace }}/build/coverage.info.cleaned
+        github-token: ${{ secrets.GITHUB_TOKEN }}
