@@ -1,8 +1,17 @@
 name: Build Status
 
-on: 
- push:
- pull_request:
+on:
+  # Triggered whenever push to the main branch
+  push:
+    branches: [ "main" ]
+
+  # Triggered whenever a pull request is created on main
+  pull_request:
+    branches: [ "main" ]
+    types: [opened]
+
+  # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   build:
