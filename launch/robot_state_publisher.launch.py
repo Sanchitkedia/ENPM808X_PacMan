@@ -28,38 +28,22 @@ def generate_launch_description():
             default_value='false',
             description='Use simulation (Gazebo) clock if true'),
 
-    rsp1 = Node(
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='false',
+            description='Use simulation (Gazebo) clock if true'),
+
+        Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
-            name='robot_state_publisher1',
-            namespace= 'tb1',
+            name='robot_state_publisher',
             output='screen',
             parameters=[{
                 'use_sim_time': use_sim_time,
                 'robot_description': robot_desc
             }],
-    ),
-
-    rsp2 = Node(
-            package='robot_state_publisher',
-            executable='robot_state_publisher',
-            name='robot_state_publisher2',
-            namespace='tb2',
-            output='screen',
-            parameters=[{
-                'use_sim_time': use_sim_time,
-                'robot_description': robot_desc
-            }],
-    ),
-
-    ld = LaunchDescription()
-
-    # Declare the launch options
-    ld.add_action(declare_sim_time)
-
-    # Add any conditioned actions
-    ld.add_action(rsp1)
-    ld.add_action(rsp2)
-
+        ),
+    ])
 
 
