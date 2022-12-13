@@ -10,17 +10,17 @@ from launch.substitutions import LaunchConfiguration
 
 
 def generate_launch_description():
-    launch_file_dir = os.path.join(get_package_share_directory('walker'), 'launch')
+    launch_file_dir = os.path.join(get_package_share_directory('ENPM808X_PacMan'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    x_pose = LaunchConfiguration('x_pose', default='-2.0')
-    y_pose = LaunchConfiguration('y_pose', default='-0.5')
+    x_pose = LaunchConfiguration('x_pose', default='0.0')
+    y_pose = LaunchConfiguration('y_pose', default='0.0')
 
     world = os.path.join(
         get_package_share_directory('turtlebot3_gazebo'),
         'worlds',
-        'turtlebot3_world.world'
+        'empty_world.world'
     )
 
     gzserver_cmd = IncludeLaunchDescription(

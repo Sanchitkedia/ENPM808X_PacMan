@@ -22,12 +22,6 @@ def generate_launch_description():
     with open(urdf_path, 'r') as infp:
         robot_desc = infp.read()
 
- 
-    declare_sim_time = DeclareLaunchArgument(
-            'use_sim_time',
-            default_value='false',
-            description='Use simulation (Gazebo) clock if true'),
-
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
