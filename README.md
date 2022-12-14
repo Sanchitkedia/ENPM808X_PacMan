@@ -26,6 +26,11 @@
 - Product Backlog Sheet: https://docs.google.com/spreadsheets/d/1_XSTd1-wi_uMZ9-BQOxIDgdvlIyRzfR8E8bqWFlsN4M/edit?usp=sharing
 - Sprint planning notes and review: https://docs.google.com/document/d/1OrpvB-jz40Q4PKwc-l2--GUYys8l9m8VKom_AwE1LNQ/edit?usp=sharing
 
+## Dependencies
+- Ubuntu 22.04.1 (Jammy Jellyfish)
+- ROS2 Humble Binary Install
+- Turtlebot3 ROS2 Packages
+
 ## License
 
 MIT License
