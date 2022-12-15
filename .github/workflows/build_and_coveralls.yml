@@ -1,0 +1,84 @@
+name: Build Status
+
+on:
+  # Triggered whenever push to the main branch
+  push:
+    branches: [ "main" ]
+
+  # Triggered whenever a pull request is created on main
+  pull_request:
+    branches: [ "main" ]
+    types: [opened]
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Create a container of the latest Ubuntu, other values could be
+    # ubuntu-latest, ubuntu-22.04, etc.
+    runs-on: ubuntu-22.04
+    steps:
+      # We want to use GitHub CI checkout version 3 to check out our branches
+      - name: Checking out
+        uses: actions/checkout@v3
+
+      # Install some system pacakges
+      - name: Install ROS 2 Humble packages
+        run: |
+          sudo apt update
+          sudo apt install -y software-properties-common
+          sudo add-apt-repository universe
+          sudo apt update && sudo apt install -y curl
+          sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
+            -o /usr/share/keyrings/ros-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) \
+            signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
+            http://packages.ros.org/ros2/ubuntu \
+            $(. /etc/os-release && echo $UBUNTU_CODENAME) main" \
+            | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+          sudo apt update
+          sudo apt install -y ros-humble-ros-base python3-colcon-common-extensions
+          sudo apt install -y lcov
+
+      # Check and install dependencies
+      - name: Update an Install dependencies
+        run: |
+          sudo rosdep init
+          rosdep update
+          rosdep install --from-paths /src -y --ignore-src
+
+      # Configure CMake flags and build exectables
+      - name: Configure CMake flags and build exectables
+        run: |
+          source /opt/ros/humble/setup.bash
+          colcon build --cmake-args -DCOVERAGE=1 --packages-select ENPM808X_PacMan
+          cat log/latest_build/ENPM808X_PacMan/stdout_stderr.log
+          find build/ENPM808X_PacMan/ | grep -E 'gcno' # catch error -- exepct to see .gcno files
+      
+      # Run unit test and also check c++ code (and others) for style and static coding errors
+      - name: Run unit test and check code error
+        run: |
+          source /opt/ros/foxy/setup.bash
+          colcon test --packages-select ENPM808X_PacMan
+          cat log/latest_test/ENPM808X_PacMan/stdout_stderr.log
+          find build/ENPM808X_PacMan/ | grep -E 'gcda' # catch error -- expect to see .gcda files
+          colcon test-result --test-result-base build/ENPM808X_PacMan/ # catch error
+      
+      # Generate code coverage test report
+      - name: Generate test coverage report
+        run: |
+          source install/setup.bash
+          ros2 run ENPM808X_PacMan generate_coverage_report.bash
+
+      # Upload coverage result to CodeCov
+      - name: Upload coverage result to CodeCov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          files: ${{github.workspace}}/install/ENPM808X_PacMan/lib/ENPM808X_PacMan/coverage_cleaned.info
+          # flags: unittests # optional
+          # directory: ${{github.workspace}}/install/
+          # name: codecov-umbrella # optional
+          fail_ci_if_error: true # optional (default = false)
+          verbose: true # optional (default = false)
