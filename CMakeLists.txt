@@ -83,5 +83,29 @@ endif()
 install(PROGRAMS      # want to make the file executable (ie. chmod a+x)
   scripts/generate_coverage_report.bash
   DESTINATION lib/${PROJECT_NAME})
+
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+      # set input and output files
+      set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs/DoxyFile)
+      set(DOXYGEN_OUT ${CMAKE_CURRENT_SOURCE_DIR}/docs/DoxyFile)
+  
+      # request to configure the file
+      configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+      message("Doxygen build started")
+  
+      # note the option ALL which allows to build the docs together with the application
+      add_custom_target( doc_doxygen ALL
+          COMMAND doxygen ${DOXYGEN_OUT}
+          WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
+          COMMENT "Generating API documentation with Doxygen"
+          VERBATIM )
+else (DOXYGEN_FOUND)
+    message("Doxygen needs to be installed to generate the doxygen documentation")
+endif (DOXYGEN_FOUND)
+  
+add_custom_target( latex_pdf ALL
+          COMMAND make
+          WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/docs/latex/)
   
 ament_package()
