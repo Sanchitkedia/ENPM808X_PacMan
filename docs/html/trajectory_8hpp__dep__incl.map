@@ -1,0 +1,8 @@
+<map id="include/trajectory.hpp" name="include/trajectory.hpp">
+<area shape="rect" id="node1" title="Header file for the trajectory class." alt="" coords="253,5,415,32"/>
+<area shape="rect" id="node2" href="$src_2main_8cpp.html" title="Main file for the project which creates the nodes." alt="" coords="5,80,111,107"/>
+<area shape="rect" id="node3" href="$master_8cpp.html" title="Master class for the project which creates a master node and executes the trajectory algorithm." alt="" coords="134,80,251,107"/>
+<area shape="rect" id="node4" href="$pubsub_8cpp.html" title="RoomBa class for the project which creates a node and publishes and subscribes to the required topics..." alt="" coords="275,80,393,107"/>
+<area shape="rect" id="node5" href="$trajectory_8cpp.html" title="Trajectory class for the project which creates a shape trajectory for the robots to follow." alt="" coords="418,80,551,107"/>
+<area shape="rect" id="node6" href="$test_8cpp.html" title="Test file for the project to test the algorithms." alt="" coords="576,80,679,107"/>
+</map>

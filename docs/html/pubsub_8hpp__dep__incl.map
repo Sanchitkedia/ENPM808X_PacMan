@@ -1,0 +1,8 @@
+<map id="include/pubsub.hpp" name="include/pubsub.hpp">
+<area shape="rect" id="node1" title="Header file for the pubsub class." alt="" coords="208,5,356,32"/>
+<area shape="rect" id="node2" href="$master_8hpp.html" title="Master class to control the robots." alt="" coords="51,80,198,107"/>
+<area shape="rect" id="node5" href="$pubsub_8cpp.html" title="RoomBa class for the project which creates a node and publishes and subscribes to the required topics..." alt="" coords="223,80,341,107"/>
+<area shape="rect" id="node6" href="$pubsub__test_8cpp.html" title="Test file for the project which tests the publisher and subscriber." alt="" coords="366,80,523,107"/>
+<area shape="rect" id="node3" href="$src_2main_8cpp.html" title="Main file for the project which creates the nodes." alt="" coords="5,155,111,181"/>
+<area shape="rect" id="node4" href="$master_8cpp.html" title="Master class for the project which creates a master node and executes the trajectory algorithm." alt="" coords="134,155,251,181"/>
+</map>

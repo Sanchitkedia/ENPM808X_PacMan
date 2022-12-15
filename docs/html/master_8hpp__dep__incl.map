@@ -1,0 +1,5 @@
+<map id="include/master.hpp" name="include/master.hpp">
+<area shape="rect" id="node1" title="Master class to control the robots." alt="" coords="51,5,198,32"/>
+<area shape="rect" id="node2" href="$src_2main_8cpp.html" title="Main file for the project which creates the nodes." alt="" coords="5,80,111,107"/>
+<area shape="rect" id="node3" href="$master_8cpp.html" title="Master class for the project which creates a master node and executes the trajectory algorithm." alt="" coords="134,80,251,107"/>
+</map>

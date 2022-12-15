@@ -1,0 +1,137 @@
+\hypertarget{classTrajectory}{}\doxysection{Trajectory Class Reference}
+\label{classTrajectory}\index{Trajectory@{Trajectory}}
+
+
+Class for the trajectory.  
+
+
+
+
+{\ttfamily \#include $<$trajectory.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTrajectory_aa340ba80f1f4d1aa39f19f069d5d8089}{Trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classTrajectory}{Trajectory}} object and initialize the variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTrajectory_a0a0775bc6dfcdd48bb6ea1bba7b285bc}{set\+Center}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Set the Center of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTrajectory_a7df6425e2599eedf9fabd8111c06c2d4}{set\+Number\+Of\+Robots}} (double n)
+\begin{DoxyCompactList}\small\item\em Set the Number Of Robots object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTrajectory_a2b0720f546d319eb3ca3c73ea1ce5841}{get\+Number\+Of\+Robots}} ()
+\begin{DoxyCompactList}\small\item\em Get the Number Of Robots object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classTrajectory_ae6d2f80488b2f2b8839d293b59eac172}{circle\+Trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the circle shape trajectory. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classTrajectory_a73aabaf7b2a526926a5118e54dae7f80}{square\+Trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the square shape trajectory. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classTrajectory_aad021e1f7535f95a8b7ab1eb8ec6091c}{triangle\+Trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Function to calculate the triangle shape trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the trajectory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTrajectory_aa340ba80f1f4d1aa39f19f069d5d8089}\label{classTrajectory_aa340ba80f1f4d1aa39f19f069d5d8089}} 
+\index{Trajectory@{Trajectory}!Trajectory@{Trajectory}}
+\index{Trajectory@{Trajectory}!Trajectory@{Trajectory}}
+\doxysubsubsection{\texorpdfstring{Trajectory()}{Trajectory()}}
+{\footnotesize\ttfamily Trajectory\+::\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classTrajectory}{Trajectory}} object and initialize the variables. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTrajectory_ae6d2f80488b2f2b8839d293b59eac172}\label{classTrajectory_ae6d2f80488b2f2b8839d293b59eac172}} 
+\index{Trajectory@{Trajectory}!circleTrajectory@{circleTrajectory}}
+\index{circleTrajectory@{circleTrajectory}!Trajectory@{Trajectory}}
+\doxysubsubsection{\texorpdfstring{circleTrajectory()}{circleTrajectory()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ double $>$ $>$ Trajectory\+::circle\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to calculate the circle shape trajectory. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::vector$<$double$>$$>$ vector of vectors containing the x and y coordinates of the robots 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTrajectory_a2b0720f546d319eb3ca3c73ea1ce5841}\label{classTrajectory_a2b0720f546d319eb3ca3c73ea1ce5841}} 
+\index{Trajectory@{Trajectory}!getNumberOfRobots@{getNumberOfRobots}}
+\index{getNumberOfRobots@{getNumberOfRobots}!Trajectory@{Trajectory}}
+\doxysubsubsection{\texorpdfstring{getNumberOfRobots()}{getNumberOfRobots()}}
+{\footnotesize\ttfamily int Trajectory\+::get\+Number\+Of\+Robots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Number Of Robots object. 
+
+\begin{DoxyReturn}{Returns}
+int number of robots 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTrajectory_a0a0775bc6dfcdd48bb6ea1bba7b285bc}\label{classTrajectory_a0a0775bc6dfcdd48bb6ea1bba7b285bc}} 
+\index{Trajectory@{Trajectory}!setCenter@{setCenter}}
+\index{setCenter@{setCenter}!Trajectory@{Trajectory}}
+\doxysubsubsection{\texorpdfstring{setCenter()}{setCenter()}}
+{\footnotesize\ttfamily void Trajectory\+::set\+Center (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Set the Center of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of the center \\
+\hline
+{\em y} & y coordinate of the center \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTrajectory_a7df6425e2599eedf9fabd8111c06c2d4}\label{classTrajectory_a7df6425e2599eedf9fabd8111c06c2d4}} 
+\index{Trajectory@{Trajectory}!setNumberOfRobots@{setNumberOfRobots}}
+\index{setNumberOfRobots@{setNumberOfRobots}!Trajectory@{Trajectory}}
+\doxysubsubsection{\texorpdfstring{setNumberOfRobots()}{setNumberOfRobots()}}
+{\footnotesize\ttfamily void Trajectory\+::set\+Number\+Of\+Robots (\begin{DoxyParamCaption}\item[{double}]{n }\end{DoxyParamCaption})}
+
+
+
+Set the Number Of Robots object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & number of robots \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTrajectory_a73aabaf7b2a526926a5118e54dae7f80}\label{classTrajectory_a73aabaf7b2a526926a5118e54dae7f80}} 
+\index{Trajectory@{Trajectory}!squareTrajectory@{squareTrajectory}}
+\index{squareTrajectory@{squareTrajectory}!Trajectory@{Trajectory}}
+\doxysubsubsection{\texorpdfstring{squareTrajectory()}{squareTrajectory()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ double $>$ $>$ Trajectory\+::square\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to calculate the square shape trajectory. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::vector$<$double$>$$>$ vector of vectors containing the x and y coordinates of the robots 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTrajectory_aad021e1f7535f95a8b7ab1eb8ec6091c}\label{classTrajectory_aad021e1f7535f95a8b7ab1eb8ec6091c}} 
+\index{Trajectory@{Trajectory}!triangleTrajectory@{triangleTrajectory}}
+\index{triangleTrajectory@{triangleTrajectory}!Trajectory@{Trajectory}}
+\doxysubsubsection{\texorpdfstring{triangleTrajectory()}{triangleTrajectory()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ double $>$ $>$ Trajectory\+::triangle\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to calculate the triangle shape trajectory. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::vector$<$double$>$$>$ vector of vectors containing the x and y coordinates of the robots 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{trajectory_8hpp}{trajectory.\+hpp}}\item 
+src/\mbox{\hyperlink{trajectory_8cpp}{trajectory.\+cpp}}\end{DoxyCompactItemize}

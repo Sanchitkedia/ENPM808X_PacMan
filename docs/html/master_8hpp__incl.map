@@ -1,0 +1,13 @@
+<map id="include/master.hpp" name="include/master.hpp">
+<area shape="rect" id="node1" title="Master class to control the robots." alt="" coords="88,5,235,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="35,80,98,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="123,80,200,107"/>
+<area shape="rect" id="node4" href="$pubsub_8hpp.html" title="Header file for the pubsub class." alt="" coords="224,80,384,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="89,155,149,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="173,155,240,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="264,155,344,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="369,155,591,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="616,155,829,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="854,155,986,181"/>
+</map>

@@ -1,0 +1,117 @@
+\begin{theindex}
+
+  \item {circleTrajectory}
+    \subitem {Trajectory}, \hyperpage{15}
+
+  \indexspace
+
+  \item {docs/introduction.txt}, \hyperpage{19}
+
+  \indexspace
+
+  \item {getNumberOfRobots}
+    \subitem {Trajectory}, \hyperpage{15}
+
+  \indexspace
+
+  \item {include/master.hpp}, \hyperpage{19}
+  \item {include/pubsub.hpp}, \hyperpage{21}
+  \item {include/trajectory.hpp}, \hyperpage{23}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{25, 26}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{25, 26}
+  \item {Master}, \hyperpage{9}
+    \subitem {Master}, \hyperpage{10}
+    \subitem {process\_callback}, \hyperpage{10}
+    \subitem {traj}, \hyperpage{10}
+  \item {master.cpp}
+    \subitem {ODOM}, \hyperpage{27}
+    \subitem {RCL\_NODE\_PTR}, \hyperpage{27}
+    \subitem {TWIST}, \hyperpage{27}
+  \item {master.hpp}
+    \subitem {ODOM}, \hyperpage{20}
+    \subitem {TWIST}, \hyperpage{20}
+
+  \indexspace
+
+  \item {node\_}
+    \subitem {TestPubSub}, \hyperpage{13}
+
+  \indexspace
+
+  \item {ODOM}
+    \subitem {master.cpp}, \hyperpage{27}
+    \subitem {master.hpp}, \hyperpage{20}
+    \subitem {pubsub.hpp}, \hyperpage{22}
+
+  \indexspace
+
+  \item {process\_callback}
+    \subitem {Master}, \hyperpage{10}
+  \item {pubsub.hpp}
+    \subitem {ODOM}, \hyperpage{22}
+    \subitem {TWIST}, \hyperpage{22}
+  \item {pubsub\_test.cpp}
+    \subitem {TEST\_F}, \hyperpage{30, 31}
+
+  \indexspace
+
+  \item {RCL\_NODE\_PTR}
+    \subitem {master.cpp}, \hyperpage{27}
+  \item {RoomBa}, \hyperpage{11}
+    \subitem {RoomBa}, \hyperpage{12}
+    \subitem {set\_goal}, \hyperpage{12}
+    \subitem {stop}, \hyperpage{12}
+
+  \indexspace
+
+  \item {set\_goal}
+    \subitem {RoomBa}, \hyperpage{12}
+  \item {setCenter}
+    \subitem {Trajectory}, \hyperpage{15}
+  \item {setNumberOfRobots}
+    \subitem {Trajectory}, \hyperpage{15}
+  \item {squareTrajectory}
+    \subitem {Trajectory}, \hyperpage{17}
+  \item {src/main.cpp}, \hyperpage{24}
+  \item {src/master.cpp}, \hyperpage{26}
+  \item {src/pubsub.cpp}, \hyperpage{28}
+  \item {src/trajectory.cpp}, \hyperpage{28}
+  \item {stop}
+    \subitem {RoomBa}, \hyperpage{12}
+
+  \indexspace
+
+  \item {TEST}
+    \subitem {test.cpp}, \hyperpage{32}
+  \item {test.cpp}
+    \subitem {TEST}, \hyperpage{32}
+  \item {test/main.cpp}, \hyperpage{25}
+  \item {test/pubsub\_test.cpp}, \hyperpage{29}
+  \item {test/test.cpp}, \hyperpage{31}
+  \item {TEST\_F}
+    \subitem {pubsub\_test.cpp}, \hyperpage{30, 31}
+  \item {TestPubSub}, \hyperpage{13}
+    \subitem {node\_}, \hyperpage{13}
+  \item {traj}
+    \subitem {Master}, \hyperpage{10}
+  \item {Trajectory}, \hyperpage{14}
+    \subitem {circleTrajectory}, \hyperpage{15}
+    \subitem {getNumberOfRobots}, \hyperpage{15}
+    \subitem {setCenter}, \hyperpage{15}
+    \subitem {setNumberOfRobots}, \hyperpage{15}
+    \subitem {squareTrajectory}, \hyperpage{17}
+    \subitem {Trajectory}, \hyperpage{14}
+    \subitem {triangleTrajectory}, \hyperpage{17}
+  \item {triangleTrajectory}
+    \subitem {Trajectory}, \hyperpage{17}
+  \item {TWIST}
+    \subitem {master.cpp}, \hyperpage{27}
+    \subitem {master.hpp}, \hyperpage{20}
+    \subitem {pubsub.hpp}, \hyperpage{22}
+
+\end{theindex}
