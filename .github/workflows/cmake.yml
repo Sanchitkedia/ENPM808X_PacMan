@@ -39,6 +39,7 @@ jobs:
             | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
           sudo apt update
           sudo apt install -y ros-humble-ros-base python3-colcon-common-extensions
+          sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
           sudo apt install -y lcov
 
       # Configure CMake flags and build exectables
