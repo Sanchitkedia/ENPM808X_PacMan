@@ -11,7 +11,9 @@ class Trajectory {
     double xCenter;
     double yCenter;
     double radius;
+    double sideLength;
     double numberOfRobots;
+    double circumRadius;
 
  public:
     Trajectory();
@@ -20,6 +22,8 @@ class Trajectory {
     int getNumberOfRobots();
 
     std::vector<std::vector<double>> circleTrajectory();
+    std::vector<std::vector<double>> squareTrajectory();
+    std::vector<std::vector<double>> triangleTrajectory();
 };
 
 #endif   // ENPM808X_PACMAN_INCLUDE_TRAJECTORY_HPP_
