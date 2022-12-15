@@ -40,8 +40,8 @@ void RoomBa::stop()
 void RoomBa::process_callback()
 {
     std::pair<double, double> goal{goal_x, goal_y};
-    double K_linear = 10;
-    double K_angular = 4.0;
+    double K_linear = 0.1;
+    double K_angular = 1.0;
     double distance = abs(sqrt(pow((goal_x-(pose.first)), 2) + pow((goal_y-(pose.second)), 2)));
     double linear_speed = distance * K_linear;
     double desired_angle_goal = atan2(goal_y-pose.second, goal_x-pose.first);
