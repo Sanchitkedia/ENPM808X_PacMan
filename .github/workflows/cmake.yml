@@ -41,13 +41,6 @@ jobs:
           sudo apt install -y ros-humble-ros-base python3-colcon-common-extensions
           sudo apt install -y lcov
 
-      # Check and install dependencies
-      - name: Update an Install dependencies
-        run: |
-          sudo rosdep init
-          rosdep update
-          rosdep install --from-paths /src -y --ignore-src
-
       # Configure CMake flags and build exectables
       - name: Configure CMake flags and build exectables
         run: |
@@ -59,7 +52,7 @@ jobs:
       # Run unit test and also check c++ code (and others) for style and static coding errors
       - name: Run unit test and check code error
         run: |
-          source /opt/ros/foxy/setup.bash
+          source /opt/ros/humble/setup.bash
           colcon test --packages-select ENPM808X_PacMan
           cat log/latest_test/ENPM808X_PacMan/stdout_stderr.log
           find build/ENPM808X_PacMan/ | grep -E 'gcda' # catch error -- expect to see .gcda files
