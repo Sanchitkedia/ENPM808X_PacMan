@@ -1,0 +1,88 @@
+\hypertarget{classMaster}{}\doxysection{Master Class Reference}
+\label{classMaster}\index{Master@{Master}}
+
+
+\mbox{\hyperlink{classMaster}{Master}} class to control the robots and spawn nodes.  
+
+
+
+
+{\ttfamily \#include $<$master.\+hpp$>$}
+
+
+
+Inheritance diagram for Master\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMaster__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Master\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classMaster__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMaster_a4f4bf00841590de7f2e2936d56158241}{Master}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRoomBa}{Room\+Ba}} $>$$>$ const \&robot\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classMaster}{Master}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaster_af226730df0ced72c25bd811e3ac51e57}{process\+\_\+callback}} ()
+\begin{DoxyCompactList}\small\item\em Empty function to be called by publisher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaster_a15ee15b214b52526596d4915064f5594}{traj}} ()
+\begin{DoxyCompactList}\small\item\em Function to select the robot trajectory to be followed and call the respective function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classMaster}{Master}} class to control the robots and spawn nodes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMaster_a4f4bf00841590de7f2e2936d56158241}\label{classMaster_a4f4bf00841590de7f2e2936d56158241}} 
+\index{Master@{Master}!Master@{Master}}
+\index{Master@{Master}!Master@{Master}}
+\doxysubsubsection{\texorpdfstring{Master()}{Master()}}
+{\footnotesize\ttfamily Master\+::\+Master (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRoomBa}{Room\+Ba}} $>$$>$ const \&}]{robot\+\_\+array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classMaster}{Master}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot\+\_\+array} & Vector of robot objects \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMaster_af226730df0ced72c25bd811e3ac51e57}\label{classMaster_af226730df0ced72c25bd811e3ac51e57}} 
+\index{Master@{Master}!process\_callback@{process\_callback}}
+\index{process\_callback@{process\_callback}!Master@{Master}}
+\doxysubsubsection{\texorpdfstring{process\_callback()}{process\_callback()}}
+{\footnotesize\ttfamily void Master\+::process\+\_\+callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empty function to be called by publisher. 
+
+\mbox{\Hypertarget{classMaster_a15ee15b214b52526596d4915064f5594}\label{classMaster_a15ee15b214b52526596d4915064f5594}} 
+\index{Master@{Master}!traj@{traj}}
+\index{traj@{traj}!Master@{Master}}
+\doxysubsubsection{\texorpdfstring{traj()}{traj()}}
+{\footnotesize\ttfamily void Master\+::traj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to select the robot trajectory to be followed and call the respective function. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{master_8hpp}{master.\+hpp}}\item 
+src/\mbox{\hyperlink{master_8cpp}{master.\+cpp}}\end{DoxyCompactItemize}
