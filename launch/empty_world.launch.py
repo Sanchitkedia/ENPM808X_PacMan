@@ -18,7 +18,7 @@ def generate_launch_description():
     y_pose = LaunchConfiguration('y_pose', default='0.0')
 
     world = os.path.join(
-        get_package_share_directory('turtlebot3_gazebo'),
+        get_package_share_directory('ENPM808X_PacMan'),
         'worlds',
         'empty_world.world'
     )

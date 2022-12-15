@@ -9,10 +9,10 @@ import numpy as np
 def generate_launch_description():
     # Get the urdf file
     Number_of_Turtlebot3 = 24
-    TURTLEBOT3_MODEL = os.environ['TURTLEBOT3_MODEL']
+    TURTLEBOT3_MODEL = 'burger'
     model_folder = 'turtlebot3_' + TURTLEBOT3_MODEL
     urdf_path = os.path.join(
-        get_package_share_directory('turtlebot3_gazebo'),
+        get_package_share_directory('ENPM808X_PacMan'),
         'models',
         model_folder,
         'model.sdf'
