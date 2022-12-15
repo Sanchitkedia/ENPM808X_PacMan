@@ -11,9 +11,21 @@ find_package(std_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(turtlebot3_gazebo REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 
-add_executable(x_pubsub src/pubsub.cpp)
-ament_target_dependencies(x_pubsub rclcpp sensor_msgs geometry_msgs std_msgs tf2 tf2_ros turtlebot3_gazebo)
+include_directories(include)
+
+add_executable(x_pubsub src/main.cpp)
+ament_target_dependencies(x_pubsub tf2 tf2_ros rclcpp std_msgs sensor_msgs geometry_msgs nav_msgs turtlebot3_gazebo)
+add_library(library src/pubsub.cpp src/master.cpp src/trajectory.cpp)
+target_include_directories(library PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
+ament_target_dependencies(library tf2 tf2_ros rclcpp std_msgs sensor_msgs geometry_msgs nav_msgs turtlebot3_gazebo)
+
+
+target_link_directories(x_pubsub PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
+target_link_libraries(x_pubsub library)
 
 install(TARGETS
   x_pubsub
@@ -45,7 +57,7 @@ if(BUILD_TESTING)
     test/pubsub_test.cpp
     )
   ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
-  ament_target_dependencies(test_${PROJECT_NAME} rclcpp std_msgs rclcpp_action)
+  ament_target_dependencies(test_${PROJECT_NAME} tf2 tf2_ros rclcpp std_msgs sensor_msgs geometry_msgs nav_msgs turtlebot3_gazebo)
 
   install(TARGETS
     test_${PROJECT_NAME}
