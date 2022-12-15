@@ -36,7 +36,34 @@ void Master::traj() {
   trajectory.setCenter(5, 0);
   trajectory.setNumberOfRobots(24);
   vector<vector<double>> circleTrajectory = trajectory.circleTrajectory();
-  for (int i = 0; i < static_cast<int>(circleTrajectory.size()); i++){
-  this->robot_array[i]->set_goal(circleTrajectory[i][0], circleTrajectory[i][1]);
-  }
+  vector<vector<double>> squareTrajectory = trajectory.squareTrajectory();
+  vector<vector<double>> triangleTrajectory = trajectory.triangleTrajectory();
+
+ int choice;
+
+  cout << "Enter which trajectory you want to follow: 1. Circle 2. Square 3. Triangle" << endl;
+  cin >> choice;
+    switch (choice) {
+        case 1:
+            cout << "Executing Circular Formation" << endl;
+            for (int i = 0; i < static_cast<int>(circleTrajectory.size()); i++){
+                this->robot_array[i]->set_goal(circleTrajectory[i][0], circleTrajectory[i][1]);
+            }
+            break;
+        case 2:
+            cout << "Executing Square Formation" << endl;
+            for (int i = 0; i < static_cast<int>(squareTrajectory.size()); i++){
+                this->robot_array[i]->set_goal(squareTrajectory[i][0], squareTrajectory[i][1]);
+            }
+            break;
+        case 3:
+            cout << "Executing Triangular Formation" << endl;
+            for (int i = 0; i < static_cast<int>(triangleTrajectory.size()); i++){
+                this->robot_array[i]->set_goal(triangleTrajectory[i][0], triangleTrajectory[i][1]);
+            }
+            break;  
+        default:
+            cout << "Invalid choice" << endl;
+            break;
+    }
 }
